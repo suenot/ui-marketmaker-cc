@@ -21,7 +21,7 @@ export default function TeamCardPage() {
       </p>
 
       <h2 className="text-xl font-black tracking-tight mb-4 mt-10">Preview</h2>
-      <ComponentPreview code={previewCode}>
+      <ComponentPreview code={previewCode} storyId="marketing-teamcard--default">
         <TeamCard name="@suenot" role="CEO" specialization="Fullstack · DevOps · AI" />
       </ComponentPreview>
 

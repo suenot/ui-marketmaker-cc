@@ -29,7 +29,7 @@ export default function CardPage() {
       </p>
 
       <h2 className="text-xl font-black tracking-tight mb-4 mt-10">Preview</h2>
-      <ComponentPreview code={previewCode}>
+      <ComponentPreview code={previewCode} storyId="ui-card--default">
         <Card className="w-72">
           <CardHeader>
             <CardTitle>Trading Signal</CardTitle>

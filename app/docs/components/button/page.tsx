@@ -69,6 +69,7 @@ export default function ButtonPage() {
       <h2 className="text-xl font-black tracking-tight mb-4 mt-10">Preview</h2>
       <ComponentPreview
         code={previewCode}
+        storyId="ui-button--all-variants"
         previewClassName="gap-4 flex-wrap"
       >
         <div className="flex flex-wrap gap-4">

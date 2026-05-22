@@ -12,7 +12,10 @@ export default function BadgePage() {
       </p>
 
       <h2 className="text-xl font-black tracking-tight mb-4 mt-10">Preview</h2>
-      <ComponentPreview code={`<Badge>AI & Fintech</Badge>\n<Badge variant="outline">Open Source</Badge>\n<Badge variant="solid">New</Badge>\n<Badge variant="muted">Beta</Badge>`}>
+      <ComponentPreview
+        code={`<Badge>AI & Fintech</Badge>\n<Badge variant="outline">Open Source</Badge>\n<Badge variant="solid">New</Badge>\n<Badge variant="muted">Beta</Badge>`}
+        storyId="ui-badge--all-variants"
+      >
         <div className="flex flex-wrap gap-3">
           <Badge>AI & Fintech</Badge>
           <Badge variant="outline">Open Source</Badge>

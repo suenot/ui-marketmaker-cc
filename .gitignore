@@ -9,6 +9,10 @@ out/
 build/
 dist/
 
+# Storybook build (generated at build time into public/)
+public/storybook/
+storybook-static/
+
 # Environment
 .env
 .env.local

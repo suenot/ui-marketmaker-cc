@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge'
 import { CodeBlock } from '@/components/docs/code-block'
 import { PropsTable } from '@/components/docs/props-table'
+import { ExternalLink } from 'lucide-react'
 
 const usageCode = `import { Navbar } from '@/components/marketing/navbar'
 
@@ -29,6 +30,14 @@ export default function NavbarPage() {
       <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
         Sticky navigation bar with scroll-aware background blur, desktop nav links, CTA button, and responsive mobile hamburger menu.
       </p>
+
+      <a
+        href="/storybook/?path=/story/marketing-navbar--default"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-2xl border border-accent/30 bg-accent/5 text-accent-darker text-sm font-bold hover:bg-accent/10 transition-colors mb-8"
+      >
+        <ExternalLink size={14} />
+        Open in Storybook
+      </a>
 
       <h2 className="text-xl font-black tracking-tight mb-4 mt-10">Usage</h2>
       <CodeBlock code={usageCode} language="tsx" />

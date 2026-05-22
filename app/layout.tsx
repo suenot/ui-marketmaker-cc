@@ -9,8 +9,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'ui-marketmaker-cc — Component Library',
-  description: 'Copy-paste ready components for marketmaker-cc — AI algorithmic trading platform.',
+  title: 'ui.marketmaker.cc — Component Library',
+  description: 'Copy-paste ready components for marketmaker.cc — AI algorithmic trading platform.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

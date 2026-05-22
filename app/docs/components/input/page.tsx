@@ -13,7 +13,7 @@ export default function InputPage() {
       </p>
 
       <h2 className="text-xl font-black tracking-tight mb-4 mt-10">Preview</h2>
-      <ComponentPreview code={`<Input placeholder="Search markets..." />`}>
+      <ComponentPreview code={`<Input placeholder="Search markets..." />`} storyId="ui-input--default">
         <Input placeholder="Search markets..." className="max-w-sm" />
       </ComponentPreview>
 
