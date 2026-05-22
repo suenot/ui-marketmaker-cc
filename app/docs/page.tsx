@@ -7,7 +7,7 @@ export default function DocsPage() {
       <Badge className="mb-4">Getting Started</Badge>
       <h1 className="text-4xl font-black tracking-tight mb-4">Introduction</h1>
       <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
-        <strong className="text-foreground font-bold">ui-marketmaker-cc</strong> is a collection of copy-paste ready React components
+        <strong className="text-foreground font-bold">ui.marketmaker.cc</strong> is a collection of copy-paste ready React components
         built for the <a href="https://marketmaker.cc" className="text-accent-darker hover:underline">marketmaker.cc</a> AI trading platform.
         Components are built with Tailwind CSS, TypeScript, and follow the design system used across all marketmaker.cc products.
       </p>

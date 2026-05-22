@@ -20,7 +20,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <Badge className="mb-6">New Components Available</Badge>
           <h1 className="text-5xl sm:text-7xl font-black tracking-tight leading-[1.2] pb-4 bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text text-transparent">
-            ui-marketmaker-cc
+            ui.marketmaker.cc
           </h1>
           <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-10 leading-relaxed">
             Copy-paste ready React components for building AI trading platform interfaces. Built with Tailwind CSS and TypeScript.
@@ -171,7 +171,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-border py-12 bg-muted/5">
         <div className="container mx-auto px-4 text-center">
-          <p className="font-black text-lg text-foreground mb-2">ui-marketmaker-cc</p>
+          <p className="font-black text-lg text-foreground mb-2">ui.marketmaker.cc</p>
           <p className="text-muted-foreground font-light text-sm">
             Open source component library for{' '}
             <a href="https://marketmaker.cc" className="text-accent-darker hover:underline">
