@@ -36,6 +36,7 @@
     "@storybook/nextjs": "^8.5.0",
     "@storybook/addon-essentials": "^8.5.0",
     "@storybook/addon-interactions": "^8.5.0",
-    "@storybook/react": "^8.5.0"
+    "@storybook/react": "^8.5.0",
+    "ajv": "^8.17.1"
   }
 }
