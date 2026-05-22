@@ -225,6 +225,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Install */}
+      <section className="py-24">
+        <div className="container mx-auto px-4">
+          <SectionHeader
+            badge="Install"
+            title="One command"
+            subtitle="Ship as an npm package — ESM, tree-shakeable, a chunk per component. Or copy the source. Your call."
+          />
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3">1 · Install</p>
+              <pre className="rounded-2xl border border-border bg-[#0d0f14] px-5 py-4 font-mono text-sm text-foreground overflow-x-auto">npm install @marketmaker_cc/ui</pre>
+            </div>
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3">2 · Wire up tokens + Tailwind</p>
+              <pre className="rounded-2xl border border-border bg-[#0d0f14] px-5 py-4 font-mono text-sm overflow-x-auto"><span className="text-muted-foreground">{"// app/layout.tsx"}</span>{"\n"}<span className="text-accent-darker">import</span> <span className="text-muted-foreground">{"'@marketmaker_cc/ui/styles.css'"}</span>{"\n\n"}<span className="text-muted-foreground">{"// tailwind.config.js"}</span>{"\n"}presets: [<span className="text-foreground">require(</span><span className="text-muted-foreground">{"'@marketmaker_cc/ui/tailwind-preset'"}</span><span className="text-foreground">)</span>]</pre>
+            </div>
+            <div>
+              <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3">3 · Import what you need</p>
+              <pre className="rounded-2xl border border-border bg-[#0d0f14] px-5 py-4 font-mono text-sm overflow-x-auto"><span className="text-muted-foreground">{"// tree-shaken named imports"}</span>{"\n"}<span className="text-accent-darker">import</span>{" { Button, OrderBook } "}<span className="text-accent-darker">from</span> <span className="text-muted-foreground">{"'@marketmaker_cc/ui'"}</span>{"\n\n"}<span className="text-muted-foreground">{"// per-component subpath — lazy loads a single chunk"}</span>{"\n"}<span className="text-accent-darker">import</span>{" { OrderForm } "}<span className="text-accent-darker">from</span> <span className="text-muted-foreground">{"'@marketmaker_cc/ui/order-form'"}</span></pre>
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <Button asChild>
+              <Link href="/docs/installation">Full Installation Guide →</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-border py-12 bg-muted/5">
         <div className="container mx-auto px-4 text-center">

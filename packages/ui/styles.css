@@ -1,0 +1,45 @@
+/**
+ * @marketmaker_cc/ui design tokens.
+ * Import once in your app (e.g. app/layout.tsx): import '@marketmaker_cc/ui/styles.css'
+ * Requires Tailwind CSS in the consuming app for the utility classes themselves.
+ *
+ * The default (:root) theme is dark; add the `light` class to a parent (e.g. <html class="light">)
+ * to opt into the light theme.
+ */
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 100%;
+  --card: 240 10% 4.9%;
+  --card-foreground: 0 0% 100%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 245 72% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 245 72% 60%;
+  --accent-foreground: 0 0% 100%;
+  --accent-darker: 245 90% 82%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 20%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 1.5rem;
+  --accent-rgb: 90, 76, 228;
+}
+
+.light {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --card: 240 5% 98%;
+  --card-foreground: 240 10% 3.9%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent-darker: 245 80% 40%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --accent-rgb: 79, 70, 229;
+}
