@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { getComponentCountLabel } from '@/lib/component-count'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
@@ -41,7 +42,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { label: 'Components', value: '10+' },
+              { label: 'Components', value: getComponentCountLabel() },
               { label: 'TypeScript', value: '100%' },
               { label: 'Dark mode', value: 'Built-in' },
               { label: 'Copy-paste', value: 'Ready' },
