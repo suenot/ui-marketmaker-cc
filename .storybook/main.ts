@@ -20,6 +20,10 @@ const config: StorybookConfig = {
       'next/link': path.resolve(__dirname, '../lib/storybook-mocks/next-link.tsx'),
       'next/navigation': path.resolve(__dirname, '../lib/storybook-mocks/next-navigation.ts'),
     }
+    config.esbuild = {
+      ...config.esbuild,
+      jsx: 'automatic',
+    }
     return config
   },
 }
