@@ -7,8 +7,31 @@ import { Input } from '@/components/ui/input'
 import { FeatureCard } from '@/components/marketing/feature-card'
 import { TeamCard } from '@/components/marketing/team-card'
 import { SectionHeader } from '@/components/marketing/section-header'
+import { OrderBook } from '@/components/trading/order-book'
+import { Portfolio } from '@/components/trading/portfolio'
 import { Header } from '@/components/site/header'
 import { BarChart3, Bot, BriefcaseIcon, Monitor, FlaskConical, TrendingUp } from 'lucide-react'
+
+const sampleBids = [
+  { price: 64012.5, amount: 0.842 },
+  { price: 64011.0, amount: 1.305 },
+  { price: 64009.5, amount: 0.517 },
+  { price: 64008.0, amount: 2.114 },
+  { price: 64006.5, amount: 0.933 },
+]
+const sampleAsks = [
+  { price: 64014.0, amount: 0.621 },
+  { price: 64015.5, amount: 1.087 },
+  { price: 64017.0, amount: 0.444 },
+  { price: 64018.5, amount: 1.762 },
+  { price: 64020.0, amount: 0.298 },
+]
+const sampleAssets = [
+  { name: 'BTC', value: 14820.5, change: 4.2 },
+  { name: 'ETH', value: 6240.0, change: -1.8 },
+  { name: 'SOL', value: 2105.75, change: 9.6 },
+  { name: 'USDT', value: 1334.25, change: 0.0 },
+]
 
 export default function HomePage() {
   return (
@@ -16,22 +39,30 @@ export default function HomePage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative pt-24 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(90,76,228,0.08),transparent_60%)]" />
+      <section className="relative pt-28 pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(90,76,228,0.12),transparent_60%)]" />
         <div className="container mx-auto px-4 text-center relative z-10">
-          <Badge className="mb-6">New Components Available</Badge>
-          <h1 className="text-5xl sm:text-7xl font-black tracking-tight leading-[1.2] pb-4 bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text text-transparent">
-            ui.marketmaker.cc
+          <Badge className="mb-6">Open source · {getComponentCountLabel()} components</Badge>
+          <h1 className="text-5xl sm:text-7xl font-black tracking-tight leading-[1.1] pb-2">
+            <span className="bg-gradient-to-b from-foreground to-foreground/60 bg-clip-text text-transparent">UI for </span>
+            <span className="text-accent-darker">Marketmaker.cc</span>
           </h1>
-          <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-10 leading-relaxed">
-            Copy-paste ready React components for building AI trading platform interfaces. Built with Tailwind CSS and TypeScript.
+          <p className="text-lg sm:text-xl text-muted-foreground font-light max-w-2xl mx-auto mt-6 mb-8 leading-relaxed">
+            A copy-paste React component library for AI trading interfaces — from buttons and dialogs to live
+            order books and portfolio charts. Built with Tailwind CSS and TypeScript.
           </p>
+          <div className="hidden sm:inline-flex items-center gap-2 rounded-xl border border-border bg-card/50 px-4 py-2 font-mono text-sm mb-10 max-w-full overflow-x-auto">
+            <span className="text-accent-darker">import</span>
+            <span className="text-foreground">{'{ OrderBook }'}</span>
+            <span className="text-accent-darker">from</span>
+            <span className="text-muted-foreground">{"'@/components/trading/order-book'"}</span>
+          </div>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Button asChild size="lg">
               <Link href="/docs">Get Started</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/docs/components">Browse Components</Link>
+              <Link href="/storybook">Open Storybook</Link>
             </Button>
           </div>
         </div>
@@ -56,8 +87,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Feature cards preview */}
+      {/* Trading components preview */}
       <section className="py-24">
+        <div className="container mx-auto px-4">
+          <SectionHeader
+            badge="Trading"
+            title="Built for Traders"
+            subtitle="Domain-specific components — order books, portfolios, order forms, and deal lists — ready to drop into your terminal."
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
+            <div className="rounded-3xl border border-border bg-card/40 p-4 backdrop-blur-xl">
+              <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-3 px-2">Order Book · BTC/USDT</p>
+              <OrderBook bids={sampleBids} asks={sampleAsks} priceDecimals={1} amountDecimals={3} />
+            </div>
+            <div className="rounded-3xl border border-border bg-card/40 p-6 backdrop-blur-xl">
+              <Portfolio assets={sampleAssets} currency="USD" title="Portfolio" subtitle="Across all exchanges" />
+            </div>
+          </div>
+          <div className="text-center mt-10">
+            <Button asChild variant="outline">
+              <Link href="/docs/components/order-book">Explore Trading Components →</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature cards preview */}
+      <section className="py-24 bg-muted/5 border-y border-border">
         <div className="container mx-auto px-4">
           <SectionHeader
             badge="Marketing"
@@ -81,7 +137,7 @@ export default function HomePage() {
       </section>
 
       {/* Base UI preview */}
-      <section className="py-24 bg-muted/5 border-y border-border">
+      <section className="py-24">
         <div className="container mx-auto px-4">
           <SectionHeader badge="Base UI" title="Primitive Components" subtitle="Buttons, badges, cards, and inputs with consistent styling." />
           <div className="max-w-4xl mx-auto space-y-12">
@@ -152,7 +208,7 @@ export default function HomePage() {
       </section>
 
       {/* Team preview */}
-      <section className="py-24">
+      <section className="py-24 bg-muted/5 border-y border-border">
         <div className="container mx-auto px-4">
           <SectionHeader badge="Marketing" title="Team Cards" subtitle="Introduce your team with clean, animated team member cards." />
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-12 max-w-3xl mx-auto">
