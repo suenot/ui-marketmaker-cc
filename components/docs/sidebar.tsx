@@ -65,6 +65,16 @@ const nav = [
     ],
   },
   {
+    title: 'Status Bar',
+    items: [
+      { title: 'Status Bar', href: '/docs/components/status-bar' },
+      { title: 'Timezone Toggle', href: '/docs/components/timezone-toggle' },
+      { title: 'Hide Toggle', href: '/docs/components/hide-toggle' },
+      { title: 'Server Stats', href: '/docs/components/server-stats' },
+      { title: 'Connection Indicator', href: '/docs/components/connection-indicator' },
+    ],
+  },
+  {
     title: 'Marketing',
     items: [
       { title: 'Hero', href: '/docs/components/hero' },
