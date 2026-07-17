@@ -12,9 +12,26 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Online: Story = {
-  args: { connected: true, onlineLabel: 'Orchestrator connected' },
+  args: { status: 'online', onlineLabel: 'Orchestrator connected' },
+}
+
+export const Warning: Story = {
+  args: { status: 'warning', warningLabel: 'Slow connection' },
 }
 
 export const Offline: Story = {
-  args: { connected: false, offlineLabel: 'Orchestrator offline' },
+  args: { status: 'offline', offlineLabel: 'Orchestrator offline' },
+}
+
+export const WithHoverDetails: Story = {
+  args: {
+    status: 'online',
+    onlineLabel: 'Backend connected',
+    details: (
+      <div className="space-y-0.5">
+        <div><span className="text-gray-400">Ping: </span><span style={{ color: '#22c55e' }}>42 ms</span></div>
+        <div><span className="text-gray-400">Updated: </span><span className="text-gray-300">320 ms ago</span></div>
+      </div>
+    ),
+  },
 }
